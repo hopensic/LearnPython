@@ -32,16 +32,6 @@ class FindElements:
             return True
         else:
             return False
-        # lt = [self.r]
-        # while len(lt) > 0:
-        #     poped = lt.pop()
-        #     if poped.val == target:
-        #         return True
-        #     if poped.left:
-        #         lt.append(poped.left)
-        #     if poped.right:
-        #         lt.append(poped.right)
-        # return False
 
 
 lst = '[-1, -1, -1, -1, -1]'
