@@ -1,8 +1,17 @@
-a = list(range(5))
+from datetime import datetime
 
-for i in a:
-    print(i)
-    if i == 9:
-        break
+aa = datetime.now()
+
+
+a = 0
+
+
+if a:
+    print('111')
 else:
-    print('ok')
+    print('222')
+
+
+
+bb = datetime.now()
+print(bb - aa)
