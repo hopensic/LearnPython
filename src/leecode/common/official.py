@@ -1,5 +1,9 @@
 from leecode.common.commons import TreeNode
 
+'''
+用于将字符串转化成二叉树
+'''
+
 
 def stringToTreeNode(input):
     input = input.strip()
