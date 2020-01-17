@@ -5,6 +5,7 @@ from hands_on_python.common.commons import ps
 input_values = [1, 4, 9, 16, 25]
 squares = [1, 4, 9, 16, 25]
 
+
 # 设置标题，给坐标轴加上标签
 plt.title("Square Numbers", fontsize=24)
 plt.xlabel("Value", fontsize=14)
