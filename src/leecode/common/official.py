@@ -1,4 +1,5 @@
-from leecode.common.commons import TreeNode
+from leecode.common.commons import TreeNode, ListNode
+import json
 
 '''
 用于将字符串转化成二叉树
@@ -43,3 +44,27 @@ def stringToTreeNode(input):
             nodeQueue.append(node.right)
 
     return root
+
+
+def stringToIntegerList(input):
+    return json.loads(input)
+
+
+'''
+将字符串转成ListNode
+'''
+
+
+def stringToListNode(input):
+    # Generate list from the input
+    numbers = stringToIntegerList(input)
+
+    # Now convert that list into linked list
+    dummyRoot = ListNode(0)
+    ptr = dummyRoot
+    for number in numbers:
+        ptr.next = ListNode(number)
+        ptr = ptr.next
+
+    ptr = dummyRoot.next
+    return ptr

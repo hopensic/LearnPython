@@ -5,6 +5,8 @@ from leecode.common.official import stringToTreeNode
 
 '''
 前序遍归遍历二叉树(前序也就是根结点是最先访问的)
+应该是1-
+
 '''
 
 
