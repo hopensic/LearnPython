@@ -1,27 +1,57 @@
-import unittest
-
 from leecode.common.common_class import TreeNode
-from leecode.common.official import stringToTreeNode
-
-'''
-前序遍归遍历二叉树(前序也就是根结点是最先访问的)
-应该是1-
-
-'''
 
 
-def preorder_traversal_with_recursion(node: TreeNode):
-    print(1)
-    return 1
+class Tree:
 
+    # 前序遍归遍历二叉树(前序也就是根结点是最先访问的)-递归
+    @staticmethod
+    def preorder_traversal_with_recursion(node: TreeNode):
+        res = []
+        if node:
+            res.append(node.val)
+            if node.left:
+                res.extend(Tree.preorder_traversal_with_recursion(node.left))
+            if node.right:
+                res.extend(Tree.preorder_traversal_with_recursion(node.right))
+            return res
+        return res
 
-class Test_Data_Structure_Tree(unittest.TestCase):
+    # 非递归
+    @staticmethod
+    def preorder_traversal_without_recursion(node: TreeNode):
+        res = []
+        stacks = []
+        if node:
+            stacks.append(node)
+            while len(stacks) > 0:
+                poped = stacks.pop()
+                res.append(poped.val)
+                if poped.right:
+                    stacks.append(poped.right)
+                if poped.left:
+                    stacks.append(poped.left)
+            return res
+        return res
 
-    @classmethod
-    def setUpClass(cls) -> None:
-        node_str = '[1,2,3,4,5,6,7]'
-        Test_Data_Structure_Tree.node = stringToTreeNode(node_str)
+    '''
+    -----------------------------------------------------------------------------------------
+    '''
 
-    def test_preorder_with_recursion(self):
-        a = preorder_traversal_with_recursion(self.node)
-        self.assertEqual(1, a)
+    # 中序遍归遍历二叉树(根结点在中间访问)-递归
+    @staticmethod
+    def inorder_traversal_with_recursion(node: TreeNode):
+        res = []
+        if node:
+            if node.left:
+                res.extend(Tree.inorder_traversal_with_recursion(node.left))
+            res.append(node.val)
+            if node.right:
+                res.extend(Tree.inorder_traversal_with_recursion(node.right))
+            return res
+        return res
+
+    # 非递归
+    @staticmethod
+    def inorder_traversal_without_recursion(node: TreeNode):
+        res = []
+        return res

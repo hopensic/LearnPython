@@ -1,7 +1,7 @@
 from datetime import datetime
 
 '''
-tag: ^766 ^medium ^
+tag: ^766 ^hard ^
 name: ^()
 '''
 
@@ -11,8 +11,7 @@ class Solution:
         return
 
 
-
-arr1 = [1,2,2,6,6,6,6,7,10]
+arr1 = [1, 2, 2, 6, 6, 6, 6, 7, 10]
 
 t1 = datetime.now()
 s = Solution()
