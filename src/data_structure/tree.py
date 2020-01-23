@@ -16,7 +16,7 @@ class Tree:
             return res
         return res
 
-    # 非递归
+    # 前序遍归-非递归
     @staticmethod
     def preorder_traversal_without_recursion(node: TreeNode):
         res = []
@@ -50,8 +50,20 @@ class Tree:
             return res
         return res
 
-    # 非递归
+    # 中序遍归-非递归
     @staticmethod
     def inorder_traversal_without_recursion(node: TreeNode):
         res = []
+        stacks = []
+        while True:
+            if node:
+                stacks.append(node)
+                node = node.left
+            elif len(stacks) > 0:
+                node = stacks.pop()
+                res.append(node.val)
+                node = node.right
+            else:
+                break
+
         return res
