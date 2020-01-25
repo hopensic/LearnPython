@@ -32,7 +32,7 @@ class Test_Data_Structure_Tree(unittest.TestCase):
         cls.node13 = stringToTreeNode('[1,2,3,4,null,7,null]')
         cls.node14 = stringToTreeNode('[1,2,3,null,4,null,6]')
 
-    # 先序递归遍历(递归)
+    # 先序遍历(递归)
     def test_preorder_traversal_with_recursion(self):
         self.assertEqual([], Tree.preorder_traversal_with_recursion(self.node1))
         self.assertEqual([1], Tree.preorder_traversal_with_recursion(self.node2))
@@ -49,9 +49,7 @@ class Test_Data_Structure_Tree(unittest.TestCase):
         self.assertEqual([1, 2, 4, 3, 7], Tree.preorder_traversal_with_recursion(self.node13))
         self.assertEqual([1, 2, 4, 3, 6], Tree.preorder_traversal_with_recursion(self.node14))
 
-        # 测试先序递归遍历(非递归)
-
-    # 先序递归遍历(非递归)
+    # 先序遍历(非递归)
     def test_preorder_without_recursion(self):
         self.assertEqual([], Tree.preorder_traversal_without_recursion(self.node1))
         self.assertEqual([1], Tree.preorder_traversal_without_recursion(self.node2))
@@ -68,7 +66,7 @@ class Test_Data_Structure_Tree(unittest.TestCase):
         self.assertEqual([1, 2, 4, 3, 7], Tree.preorder_traversal_without_recursion(self.node13))
         self.assertEqual([1, 2, 4, 3, 6], Tree.preorder_traversal_without_recursion(self.node14))
 
-    # 中序递归遍历(递归)
+    # 中序遍历(递归)
 
     def test_inorder_traversal_with_recursion(self):
         self.assertEqual([], Tree.inorder_traversal_with_recursion(self.node1))
@@ -88,6 +86,7 @@ class Test_Data_Structure_Tree(unittest.TestCase):
 
         # 中序递归遍历(非递归)
 
+    # 中序遍历(非递归)
     def test_inorder_traversal_without_recursion(self):
         self.assertEqual([], Tree.inorder_traversal_without_recursion(self.node1))
         self.assertEqual([1], Tree.inorder_traversal_without_recursion(self.node2))
@@ -103,3 +102,37 @@ class Test_Data_Structure_Tree(unittest.TestCase):
         self.assertEqual([4, 2, 1, 3, 7], Tree.inorder_traversal_without_recursion(self.node12))
         self.assertEqual([4, 2, 1, 7, 3], Tree.inorder_traversal_without_recursion(self.node13))
         self.assertEqual([2, 4, 1, 3, 6], Tree.inorder_traversal_without_recursion(self.node14))
+
+    # 后序遍历(递归)
+    def test_postorder_traversal_with_recursion(self):
+        self.assertEqual([], Tree.postorder_traversal_with_recursion(self.node1))
+        self.assertEqual([1], Tree.postorder_traversal_with_recursion(self.node2))
+        self.assertEqual([2, 1], Tree.postorder_traversal_with_recursion(self.node3))
+        self.assertEqual([3, 2, 1], Tree.postorder_traversal_with_recursion(self.node4))
+        self.assertEqual([4, 2, 1], Tree.postorder_traversal_with_recursion(self.node5))
+        self.assertEqual([3, 4, 2, 1], Tree.postorder_traversal_with_recursion(self.node6), )
+        self.assertEqual([3, 1], Tree.postorder_traversal_with_recursion(self.node7))
+        self.assertEqual([4, 3, 1], Tree.postorder_traversal_with_recursion(self.node8))
+        self.assertEqual([5, 3, 1], Tree.postorder_traversal_with_recursion(self.node9))
+        self.assertEqual([4, 5, 2, 6, 7, 3, 1], Tree.postorder_traversal_with_recursion(self.node10))
+        self.assertEqual([5, 2, 6, 3, 1], Tree.postorder_traversal_with_recursion(self.node11))
+        self.assertEqual([4, 2, 7, 3, 1], Tree.postorder_traversal_with_recursion(self.node12))
+        self.assertEqual([4, 2, 7, 3, 1], Tree.postorder_traversal_with_recursion(self.node13))
+        self.assertEqual([4, 2, 6, 3, 1], Tree.postorder_traversal_with_recursion(self.node14))
+
+        # 后序遍历(非递归)
+    def test_postorder_traversal_without_recursion(self):
+        self.assertEqual([], Tree.postorder_traversal_without_recursion(self.node1))
+        self.assertEqual([1], Tree.postorder_traversal_without_recursion(self.node2))
+        self.assertEqual([2, 1], Tree.postorder_traversal_without_recursion(self.node3))
+        self.assertEqual([3, 2, 1], Tree.postorder_traversal_without_recursion(self.node4))
+        self.assertEqual([4, 2, 1], Tree.postorder_traversal_without_recursion(self.node5))
+        self.assertEqual([3, 4, 2, 1], Tree.postorder_traversal_without_recursion(self.node6), )
+        self.assertEqual([3, 1], Tree.postorder_traversal_without_recursion(self.node7))
+        self.assertEqual([4, 3, 1], Tree.postorder_traversal_without_recursion(self.node8))
+        self.assertEqual([5, 3, 1], Tree.postorder_traversal_without_recursion(self.node9))
+        self.assertEqual([4, 5, 2, 6, 7, 3, 1], Tree.postorder_traversal_without_recursion(self.node10))
+        self.assertEqual([5, 2, 6, 3, 1], Tree.postorder_traversal_without_recursion(self.node11))
+        self.assertEqual([4, 2, 7, 3, 1], Tree.postorder_traversal_without_recursion(self.node12))
+        self.assertEqual([4, 2, 7, 3, 1], Tree.postorder_traversal_without_recursion(self.node13))
+        self.assertEqual([4, 2, 6, 3, 1], Tree.postorder_traversal_without_recursion(self.node14))
