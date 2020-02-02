@@ -77,11 +77,8 @@ class Solution:
                     temp_sum += 1
                     if last == len(A) - 1:
                         break
-                    while last<len(A):
-
-
-
-
+                    while last < len(A):
+                        pass
 
         return sum_k
 

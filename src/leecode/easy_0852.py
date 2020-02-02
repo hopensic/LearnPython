@@ -1,3 +1,9 @@
+'''
+tag: ^852 ^easy ^binary-search
+name: ^(Intersection of Two Linked Lists)
+'''
+
+
 class Solution:
     def peakIndexInMountainArray(self, A):
         for i in range(0, len(A)):
