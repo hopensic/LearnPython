@@ -29,7 +29,8 @@ class Solution:
 
             if i - (maxlen + 2) >= 0:
                 if prefix_sum[i] == prefix_sum[i - (maxlen + 2)]:
-                    maxlen = i-
+                    pass
+                    # maxlen = i-
         return maxlen
 
 
