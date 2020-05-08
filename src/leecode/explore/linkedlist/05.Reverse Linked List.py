@@ -21,8 +21,7 @@ class Solution:
 arr = '[1]'
 lst = stringToListNode(arr)
 
-# p = head
-# while p.next: p = p.next
+
 
 s = Solution()
 print(s.reverseList(lst))
