@@ -31,7 +31,7 @@ class DAGraph:
         self.vertex_dic[vertex.val] = vertex
 
     # 判断找到入度为0的顶点
-    def get_indegree_withzeor(self):
+    def get_indegree_withzero(self):
         for v in self.vertex_dic.values():
             if v.in_degree == 0:
                 return v
@@ -40,7 +40,7 @@ class DAGraph:
     def topo_sort(self):
         res = []
         for _ in range(len(self.vertex_dic)):
-            v = self.get_indegree_withzeor()
+            v = self.get_indegree_withzero()
             # 没有找到入度为0的顶点
             if not v:
                 raise Exception
