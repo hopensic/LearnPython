@@ -55,6 +55,8 @@ class ListNode:
         self.next = None
 
 
+
+
 def build_list_from_tree_new(root: TreeNode):
     depth = cal_tree_depth(root)
     lst = [None] * (2 ** depth - 1)
