@@ -2,7 +2,7 @@ from datetime import datetime
 from collections import Counter
 
 '''
-tag: ^1255 ^hard ^Bit-Manipulation
+tag: ^1255 ^hard ^bit-Manipulation
 name: ^(Maximum Score Words Formed by Letters)
 '''
 
