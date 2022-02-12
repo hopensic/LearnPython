@@ -1,2 +1,5 @@
 /.idea/
 /venv/
+/src/pnp/const.py
+/src/leecode/common/__pycache__/
+/src/temp/__pycache__/
