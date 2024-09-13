@@ -1,11 +1,8 @@
 feedparser~=6.0.2
-Scrapy~=2.1.0
 pygame~=2.0.1
 DateTime~=4.3
 numpy~=1.18.2
 pandas~=1.0.3
 tqdm~=4.53.0
-scikit-learn~=0.23.2
 matplotlib~=3.2.1
-requests~=2.23.0
 pygal~=2.4.0

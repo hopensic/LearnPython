@@ -5,7 +5,7 @@ def executeInstructions(n, start, s):
     ns = len(s)
     (x0, y0), (x, y) = start, (0, 0)
     res = range(ns, 0, -1)
-    count = collections.defaultdict(set)
+    count = collections.defaultdict(set)<
     count[x0, None].add(0)
     count[None, y0].add(0)
     for i in range(ns):
